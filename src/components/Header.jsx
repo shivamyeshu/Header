@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="logo">
-        <h1>My Vite App</h1>
+        <h1>App</h1>
       </div>
       <div className="hamburger" onClick={toggleMenu}>
         <span className="line"></span>
