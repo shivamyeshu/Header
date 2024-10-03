@@ -1,0 +1,83 @@
+/* Styles for Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #282c34;
+    color: white;
+    position: relative;
+  }
+  
+  .logo h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .nav-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+  }
+  
+  .nav-links a:hover {
+    background-color: #444;
+  }
+  
+  /* Hamburger Icon */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .nav-links {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 200px;
+      height: 100vh;
+      background-color: #282c34;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: right 0.3s ease-in-out;
+      z-index: 1000;
+    }
+  
+    .nav-links.open {
+      right: 0;
+    }
+  
+    .nav-links ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  }
+  
